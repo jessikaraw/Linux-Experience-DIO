@@ -1,0 +1,37 @@
+#CRIE UM SCRIPT CHAMADO SCRIPT-IAC2.SH NA PASTA DE SCRIPTS
+nano script-iac2.sh
+
+
+#!/bin/bash
+
+echo "Atualizando repositórios"
+apt-get update
+
+echo "Instalando possíveis atualizações"
+apt-get upgrade -y
+
+echo "Instalando o Apache2 e Unzip"
+apt-get install apache2 unzip -y
+
+echo "Acessando pasta tmp"
+cd /tmp
+
+echo "Baixando site no repositório do Github"
+wget 
+
+echo "Descompactando o site"
+unzip https://github.com/denilsonbonatti/linux-site-dio/archive/refs/heads/main.zip
+
+echo "Copiando o site para o diretório do Apache"
+cp -R /var/www/html/
+
+echo "Fim do script"
+
+
+# INSTRUÇÕES DE EXECUÇÃO
+
+# 1º passo: dar permissão de execução do script. 
+# chmod +x iac-apache.sh
+# 2º passo: executar o script.
+# ./iac-apache.sh
+
